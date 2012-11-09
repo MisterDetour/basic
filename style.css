@@ -1,0 +1,44 @@
+/*
+Theme Name: Basic
+Theme URI: http://www.hybridvigordesign.com/themes/basic
+Description: A very basic stripped down starter theme for using wordpress as a small site cms.
+Author: David LaTour
+Author URI: http://www.hybridvigordesign.com
+Version: 1.0
+*/
+
+
+/* ---------- WP Default Classes ---------- */
+
+.alignnone {
+    margin: 0 10px 10px 0;
+	}
+
+.aligncenter {
+    display: block;
+    margin: 10px auto;
+	}
+
+.alignright {
+    float: right;
+    margin: 0 0 10px 10px;
+	}
+
+.alignleft {
+    float: left;
+    margin: 0 10px 10px 0;
+	}
+
+#content .entry ul, #content .entry ol {
+    margin: 10px 20px;
+    }
+
+#content .entry ul li {
+    margin: 5px 0;
+    list-style-type: disc;
+    }
+
+#content .entry ul, #content .entry ol {
+    margin: 5px 0;
+    list-style-type: decimal;
+    }
