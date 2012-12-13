@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 
-	<div id="main">
-		
-		<div id="content">
+		<article id="content" class="post not-found" role="main">
 				
-			<h1 class="page-title">Not Found</h1>
+			<header class="page-header">
+				<h1 class="page-title">Oops! Not Found</h1>
+			</header><!-- .page-header -->
 
 			<div class="entry">
 	
@@ -12,10 +12,8 @@
 
 			</div><!-- .entry -->
 	
-		</div><!-- #content -->
+		</article><!-- #content -->
 		
 		<?php get_sidebar(); ?>
-		
-	</div><!-- #main -->
 
 <?php get_footer(); ?>

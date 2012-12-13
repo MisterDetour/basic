@@ -1,21 +1,19 @@
 <?php get_header(); ?>
 
-	<div id="main">
-		
-		<div id="content">
+		<section id="content" role="main">
 		
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 					
-					<header>
+					<header class="post-header">
 						<h2 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
 					
 						<div class="post-date">
 							<p>Posted on: <?php the_time('F jS, Y') ?> by <?php the_author() ?>
 							<?php comments_popup_link('No Comments', '1 Comment', '% Comments', 'comments-link', ''); ?></p>
 						</div><!-- .post-date -->
-					</header>
+					</header><!-- .post-header -->
 					
 					<div class="entry">
 			
@@ -48,11 +46,9 @@
 					
 			<?php endif; ?>
 
-		</div><!-- #content -->
+		</section><!-- #content -->
 		
 		<?php get_sidebar(); ?>
-		
-	</div><!-- #main -->
 
 <?php get_footer(); ?>
 

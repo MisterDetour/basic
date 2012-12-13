@@ -1,14 +1,15 @@
 <?php
 
-// Clean up the head section
-function head_links() {
+// Do some basic theme set up
+function basic_theme_setup() {
 	remove_action('wp_head', 'rsd_link');
 	remove_action('wp_head', 'wlwmanifest_link');
 	remove_action('wp_head', 'wp_generator');
 	add_theme_support('automatic-feed-links');
+	add_theme_support( 'post-thumbnails' );
 }
 
-add_action('init', 'head_links');
+add_action('init', 'basic_theme_setup');
 
 // Register navigation menus
 function register_basic_menus() {
@@ -35,8 +36,11 @@ function register_basic_sidebars() {
 
 add_action('init', 'register_basic_sidebars');
 
-// Load Any Javascript files
+// Load Javascript & CSS files
 function load_scripts() {
+	
+	wp_enqueue_style( 'style', get_stylesheet_uri() );
+
 	$url = get_bloginfo('template_url').'/js/';
 	if (!is_admin()) {
 		wp_enqueue_script('custom', $src = $url . 'custom.js', array('jquery'), false, true );

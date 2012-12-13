@@ -1,25 +1,23 @@
 <?php get_header(); ?>
 
-	<div id="main">
-		<?php wp_get_archives('type=yearly'); ?>
-		<div id="content">
+		<section id="content" role="main">
 				
-			<header>
+			<header class="page-header">
 				<h1 class="page-title">Search Results for: <span><?php echo get_search_query(); ?></span></h1>
-			</header>
+			</header><!-- .page-header -->
 			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 					
-					<header>
+					<header class="post-header">
 						<h2 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
 					
 						<div class="post-date">
 							Posted on: <?php the_time('F jS, Y') ?> by <?php the_author() ?>
 							<?php comments_popup_link('No Comments', '1 Comment', '% Comments', 'comments-link', ''); ?>
 						</div><!-- .post-date -->
-					</header>
+					</header><!-- .post-header -->
 					
 					<div class="entry">
 			
@@ -52,11 +50,9 @@
 					
 			<?php endif; ?>
 
-		</div><!-- #content -->
+		</section><!-- #content -->
 		
 		<?php get_sidebar(); ?>
-		
-	</div><!-- #main -->
 
 <?php get_footer(); ?>
 

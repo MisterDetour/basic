@@ -1,20 +1,18 @@
 <?php get_header(); ?>
-
-	<div id="main">
 		
-		<div id="content">
+		<article id="content" role="main">
 		
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
+				<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
 					
-					<header>
+					<header class="post-header">
 						<h1 class="post-title"><?php the_title() ?></h1>
 					
 						<div class="post-date">
 							<p>Posted on: <?php the_time('F jS, Y') ?> by <?php the_author() ?></p>
 						</div><!-- .post-date -->
-					</header>
+					</header><!-- .post-header -->
 					
 					<div class="entry">
 			
@@ -31,7 +29,7 @@
 						Posted in: <?php the_category(', ') ?></p>
 					</footer><!-- .post-meta -->
 					
-				</article><!-- .post -->
+				</div><!-- .post -->
 				
 				<?php comments_template(); ?>
 				
@@ -47,11 +45,9 @@
 					
 			<?php endif; ?>
 
-		</div><!-- #content -->
+		</article><!-- #content -->
 		
 		<?php get_sidebar(); ?>
-		
-	</div><!-- #main -->
 
 <?php get_footer(); ?>
 

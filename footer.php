@@ -1,5 +1,7 @@
 
-	<footer id="footer">
+	</div><!-- #main -->
+	
+	<footer id="footer" role="contentinfo">
 		
 		<p class="copy">&copy;<?php echo date("Y") . ' ' . get_bloginfo('name'); ?></p>
 		

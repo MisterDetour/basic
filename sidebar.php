@@ -1,5 +1,5 @@
 	
-	<aside id="sidebar">
+	<aside id="sidebar" role="complementary">
 
 		<?php dynamic_sidebar( 'primary-sidebar' ); ?>
 

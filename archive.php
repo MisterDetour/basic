@@ -1,16 +1,16 @@
 <?php get_header(); ?>
 
-	<div id="main">
-
-		<div id="content">
+		<section id="content" role="main">
 		
 			<?php if (have_posts()) : ?>
 				
-				<header>
+				<header class="page-header">
 					<?php if (is_category()) : ?>
 						<h1 class="page-title">Archive for &ldquo;<?php single_cat_title(); ?>&rdquo; Category</h1>
 					<?php elseif( is_tag() ) : ?>
 						<h1 class="page-title">Archive for &ldquo;<?php single_tag_title(); ?>&rdquo; Tag</h1>
+					<?php elseif ( is_author() ) : the_post(); ?>
+						<h1 class="page-title">Archive for <?php echo get_the_author(); ?></h1>
 					<?php elseif( is_day() ) : ?>
 						<h1 class="page-title">Archive for <?php the_time('F jS, Y'); ?></h1>
 					<?php elseif ( is_month() ) : ?>
@@ -20,20 +20,20 @@
 					<?php else : ?>
 						<h1 class="page-title">Blog Archives</h1>
 					<?php endif; ?>
-				</header>
+				</header><!-- .page-header -->
 			
 				<?php while (have_posts()) : the_post(); ?>
 
-					<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
 					
-						<header>
+						<header class="post-header">
 							<h2 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
 					
 							<div class="post-date">
 								<p>Posted on: <?php the_time('F jS, Y') ?> by <?php the_author() ?>
 								<?php comments_popup_link('No Comments', '1 Comment', '% Comments', 'comments-link', ''); ?></p>
 							</div><!-- .post-date -->
-						</header>
+						</header><!-- .post-header -->
 					
 						<div class="entry">
 			
@@ -58,19 +58,17 @@
 			
 			<?php else : ?>
 
-				<div class="post">
+				<article class="post">
 					
 					<h2>No posts Found</h2>
 					
-				</div><!-- .post -->
+				</article><!-- .post -->
 					
 			<?php endif; ?>
 
-		</div><!-- #content -->
+		</section><!-- #content -->
 		
 		<?php get_sidebar(); ?>
-		
-	</div><!-- #main -->
 
 <?php get_footer(); ?>
 
