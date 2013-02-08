@@ -11,9 +11,6 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<meta name="viewport" content="width=device-width">
 	
-	<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/reset.css">
-	<link rel="stylesheet" href="<?php bloginfo( 'stylesheet_url' ); ?>">
-	
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	

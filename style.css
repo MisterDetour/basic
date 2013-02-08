@@ -38,7 +38,7 @@ Version: 1.0
     list-style-type: disc;
     }
 
-#content .entry ul, #content .entry ol {
+#content .entry ol li {
     margin: 5px 0;
     list-style-type: decimal;
     }

@@ -39,6 +39,7 @@ add_action('init', 'register_basic_sidebars');
 // Load Javascript & CSS files
 function load_scripts() {
 	
+	wp_enqueue_style( 'reset', get_stylesheet_directory_uri() . '/css/reset.css' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
 	$url = get_bloginfo('template_url').'/js/';
