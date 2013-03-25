@@ -23,14 +23,14 @@
 <body <?php body_class(); ?>>
 	
 <div id="wrapper">
-	
+
 	<header id="header" role="banner">
 		<?php $tag = ( is_front_page() || is_home() ) ? 'h1' : 'div'; ?>
 		<<?php echo $tag; ?> id="logo"><a href="<?php bloginfo('home') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></<?php echo $tag; ?>>
 	</header><!--  #header -->
 	
 	<nav id="nav" role="navigation">
-		<h1 class="assistive-text">Menu</h1>
+		<h2 class="assistive-text">Menu</h2>
 		<div class="assistive-text skip-link"><a href="#content" title="Skip to content'">Skip to content</a></div>
 			
 		<?php wp_nav_menu(array( 'theme_location' => 'header-menu', 'container_id' => 'nav-menu', 'container_class' => 'menu-wrap', 'menu_id' => 'main-menu')); ?>
