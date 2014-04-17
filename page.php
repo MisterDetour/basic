@@ -2,23 +2,25 @@
 		
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
-			<article id="content" role="main">
-					
-				<header class="page-header">
-					<h1 class="page-title"><?php the_title() ?></h1>
-				</header><!-- .page-header -->
+			<div id="content" role="main">
 				
-				<div class="entry">
+				<article>	
+					<header class="page-header">
+						<h1 class="page-title"><?php the_title() ?></h1>
+					</header><!-- .page-header -->
+				
+					<div class="entry">
 		
-					<?php the_content() ?>
+						<?php the_content() ?>
 
-				</div><!-- .entry -->
+					</div><!-- .entry -->
 				
-				<footer>
-					<?php edit_post_link('Edit this entry.', '<p>', '</p>') ?>
-				</footer>
-					
-			</article><!-- #content -->
+					<footer>
+						<?php edit_post_link('Edit this entry.', '<p>', '</p>') ?>
+					</footer>
+				</article>
+				
+			</div><!-- #content -->
 			
 		<?php endwhile; endif; ?>
 		

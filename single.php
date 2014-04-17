@@ -1,10 +1,10 @@
 <?php get_header(); ?>
 		
-		<article id="content" role="main">
+		<main id="content" role="main">
 		
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-				<div <?php post_class() ?> id="post-<?php the_ID(); ?>">
+				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 					
 					<header class="post-header">
 						<h1 class="post-title"><?php the_title() ?></h1>
@@ -29,7 +29,7 @@
 						Posted in: <?php the_category(', ') ?></p>
 					</footer><!-- .post-meta -->
 					
-				</div><!-- .post -->
+				</article><!-- .post -->
 				
 				<?php comments_template(); ?>
 				
@@ -45,7 +45,7 @@
 					
 			<?php endif; ?>
 
-		</article><!-- #content -->
+		</main><!-- #content -->
 		
 		<?php get_sidebar(); ?>
 

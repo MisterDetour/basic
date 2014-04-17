@@ -1,7 +1,5 @@
-<!doctype html>
+<!DOCTYPE html>
 
-<!--[if lt IE 7 ]> <html class="ie ie6" <?php language_attributes(); ?>> <![endif]-->
-<!--[if IE 7 ]>    <html class="ie ie7" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie ie8" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie ie9" <?php language_attributes(); ?>> <![endif]-->
 <!--[if gt IE 9]><!--><html <?php language_attributes(); ?>><!--<![endif]-->
@@ -29,7 +27,7 @@
 
 	<header id="header" role="banner">
 		<?php $tag = ( is_front_page() || is_home() ) ? 'h1' : 'div'; ?>
-		<<?php echo $tag; ?> id="logo"><a href="<?php bloginfo('url') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></<?php echo $tag; ?>>
+		<<?php echo $tag; ?> id="logo"><a href="<?php bloginfo('home') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></<?php echo $tag; ?>>
 		
 		<nav id="nav" role="navigation">
 			<h2 class="assistive-text">Menu</h2>
@@ -39,4 +37,4 @@
 		</nav><!-- #nav -->
 	</header><!--  #header -->
 	
-	<div id="main" class="site-main">
+	<div id="main" role="main">

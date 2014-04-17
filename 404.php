@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-		<article id="content" class="post not-found" role="main">
+		<main id="content" class="post not-found" role="main">
 				
 			<header class="page-header">
 				<h1 class="page-title">Oops! Not Found</h1>
@@ -12,7 +12,7 @@
 
 			</div><!-- .entry -->
 	
-		</article><!-- #content -->
+		</main><!-- #content -->
 		
 		<?php get_sidebar(); ?>
 
