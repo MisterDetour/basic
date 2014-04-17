@@ -1,65 +1,47 @@
 <?php
-
-	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
-		die ();
-
-	if ( post_password_required() ) { ?>
-		This post is password protected. Enter the password to view comments.
-	<?php
-		return;
-	}
+if ( post_password_required() ) {
+	return;
+}
 ?>
 
-<?php if ( have_comments() ) : ?>
-	
-	<header>
-		<h2 id="comments"><?php comments_number('No Responses', 'One Response', '% Responses' ); ?></h2>
-	</header>
-		
-	<div class="navigation">
-		<div class="next-posts"><?php previous_comments_link() ?></div>
-		<div class="prev-posts"><?php next_comments_link() ?></div>
-	</div>
+<div id="comments" class="comments-area">
 
-	<ol class="commentlist">
-		<?php wp_list_comments(); ?>
-	</ol>
+	<?php if ( have_comments() ) : ?>
+		<header>
+			<h2 class="comments-title"><?php comments_number('No Responses', 'One Response', '% Responses' ); ?></h2>
+		</header>
 
-	<div class="navigation">
-		<div class="next-posts"><?php previous_comments_link() ?></div>
-		<div class="prev-posts"><?php next_comments_link() ?></div>
-	</div>
-	
- <?php else : // No comments so far ?>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+			<nav id="comment-nav-above" class="comment-navigation" role="navigation">
+				<h1 class="screen-reader-text">Comment navigation</h1>
+				<div class="nav-previous"><?php previous_comments_link( '&larr; Older Comments' ); ?></div>
+				<div class="nav-next"><?php next_comments_link( 'Newer Comments &rarr;' ); ?></div>
+			</nav><!-- #comment-nav-above -->
+		<?php endif;  ?>
 
-	<?php if ( comments_open() ) : ?>
-		<!-- Comments are open, but there are no comments. -->
+		<ol class="comment-list">
+			<?php
+				wp_list_comments( array(
+					'style'      => 'ol',
+					'short_ping' => true,
+				) );
+			?>
+		</ol><!-- .comment-list -->
 
-	 <?php else : // comments are closed ?>
-		<p>Comments are closed.</p>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+			<nav id="comment-nav-below" class="comment-navigation" role="navigation">
+				<h1 class="screen-reader-text">Comment navigation</h1>
+				<div class="nav-previous"><?php previous_comments_link( '&larr; Older Comments' ); ?></div>
+				<div class="nav-next"><?php next_comments_link( 'Newer Comments &rarr;' ); ?></div>
+			</nav><!-- #comment-nav-below -->
+		<?php endif; ?>
 
 	<?php endif; ?>
-	
-<?php endif; ?>
 
-<?php if ( comments_open() ) : ?>
+	<?php if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+		<p class="no-comments">Comments are closed.</p>
+	<?php endif; ?>
 
-<div id="respond">
+	<?php comment_form(); ?>
 
-	<header>
-		<h2><?php comment_form_title( 'Leave a Reply', 'Leave a Reply to %s' ); ?></h2>
-	</header>
-		
-	<div class="cancel-comment-reply">
-		<?php cancel_comment_reply_link(); ?>
-	</div>
-
-	<?php if ( get_option('comment_registration') && !is_user_logged_in() ) : ?>
-		<p>You must be <a href="<?php echo wp_login_url( get_permalink() ); ?>">logged in</a> to post a comment.</p>
-	<?php else : ?>
-		<?php comment_form(); ?>
-	<?php endif; // If registration required and not logged in ?>
-	
-</div>
-
-<?php endif; ?>
+</div><!-- #comments -->
