@@ -21,6 +21,10 @@ article, aside, figure, footer, header, hgroup, nav, section {
 img, object, embed {
 	max-width: 100%;
 	}
+	
+img {
+	height: auto;
+	}
 
 html {
 	overflow-y: scroll;

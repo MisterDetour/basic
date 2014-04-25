@@ -37,21 +37,19 @@ function register_basic_sidebars() {
 add_action('init', 'register_basic_sidebars');
 
 // Load Javascript & CSS files
-function load_scripts() {
+function basic_load_scripts() {
 	
 	wp_enqueue_style( 'reset', get_stylesheet_directory_uri() . '/css/reset.css' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
-	$url = get_bloginfo('template_url').'/js/';
-	if (!is_admin()) {
-		wp_enqueue_script('custom', $src = $url . 'custom.js', array('jquery'), false, true );
-		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-			wp_enqueue_script( 'comment-reply' );
-		}
+	$url = get_template_directory_uri().'/js/';
+	wp_enqueue_script('custom', $src = $url . 'custom.js', array('jquery'), false, true );
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
 	}
 }
 
-add_action('wp_enqueue_scripts', 'load_scripts');
+add_action('wp_enqueue_scripts', 'lbasic_oad_scripts');
 
 // Format title element
 function basic_title( $title, $sep ) {
