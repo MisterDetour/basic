@@ -1,29 +1,29 @@
 <?php get_header(); ?>
 		
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		
-			<div id="content" role="main">
+		<main id="content" role="main">
+			
+			<?php while (have_posts()) : the_post(); ?>
 				
 				<article>	
 					<header class="page-header">
 						<h1 class="page-title"><?php the_title() ?></h1>
 					</header><!-- .page-header -->
-				
+			
 					<div class="entry">
-		
+	
 						<?php the_content() ?>
 
 					</div><!-- .entry -->
-				
+			
 					<footer>
-						<?php edit_post_link('Edit this entry.', '<p>', '</p>') ?>
+						<?php edit_post_link('Edit this entry.', '<div>', '</div>'); ?>
 					</footer>
 				</article>
-				
-			</div><!-- #content -->
 			
-		<?php endwhile; endif; ?>
-		
+			<?php endwhile; ?>
+			
+		</main><!-- #content -->
+			
 		<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

@@ -37,4 +37,4 @@
 		</nav><!-- #nav -->
 	</header><!--  #header -->
 	
-	<div id="main" role="main">
+	<div id="primary">

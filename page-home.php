@@ -22,7 +22,7 @@ get_header(); ?>
 					</div><!-- .entry -->
 				
 					<footer>
-						<?php edit_post_link('Edit this entry.', '<p>', '</p>') ?>
+						<?php edit_post_link('Edit this entry.', '<div>', '</div>'); ?>
 					</footer>
 				</article>
 				

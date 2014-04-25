@@ -22,7 +22,7 @@
 						
 					</div><!-- .entry -->
 					
-					<?php edit_post_link('Edit this entry.', '<p>', '</p>') ?>
+					<?php edit_post_link('Edit this entry.', '<div>', '</div>'); ?>
 					
 					<footer class="post-meta">
 						<p><?php the_tags('Tags: ', ', ', '<br />'); ?>
