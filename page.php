@@ -10,9 +10,7 @@
 					</header><!-- .page-header -->
 			
 					<div class="entry">
-	
 						<?php the_content() ?>
-
 					</div><!-- .entry -->
 			
 					<footer>

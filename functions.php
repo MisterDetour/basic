@@ -10,12 +10,14 @@ function basic_theme_setup() {
 	add_theme_support( 'html5', array( 'comment-list', 'comment-form', 'search-form', 'gallery', 'caption' ) );
 }
 
-add_action('init', 'basic_theme_setup');
+add_action( 'init', 'basic_theme_setup' );
 
 // Register navigation menus
 function register_basic_menus() {
 	register_nav_menus(
-    	array('header-menu' => 'Header Menu')
+    	array(
+			'header-menu' => 'Header Menu'
+		)
   	);
 }
 
@@ -35,7 +37,7 @@ function register_basic_sidebars() {
 	}
 }
 
-add_action('init', 'register_basic_sidebars');
+add_action( 'init', 'register_basic_sidebars' );
 
 // Load Javascript & CSS files
 function basic_load_scripts() {
@@ -50,7 +52,7 @@ function basic_load_scripts() {
 	}
 }
 
-add_action('wp_enqueue_scripts', 'lbasic_oad_scripts');
+add_action( 'wp_enqueue_scripts', 'lbasic_oad_scripts' );
 
 // Format title element
 function basic_title( $title, $sep ) {

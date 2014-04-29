@@ -2,7 +2,7 @@
 		
 		<main id="content" role="main">
 		
-			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php while (have_posts()) : the_post(); ?>
 
 				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 					
@@ -34,16 +34,6 @@
 				<?php comments_template(); ?>
 				
 			<?php endwhile; ?>
-			
-			<?php else : ?>
-
-				<div class="post">
-					
-					<h2>Not Found</h2>
-					
-				</div><!-- .post -->
-					
-			<?php endif; ?>
 
 		</main><!-- #content -->
 		
