@@ -7,6 +7,13 @@ Author URI: http://www.hybridvigordesign.com
 Version: 1.0
 */
 
+/* --------------- Basic Layout --------------- */
+
+body {
+	
+	}	
+
+/* --------------- Logo --------------- */
 
 #logo {
 	margin: 0;
@@ -23,7 +30,7 @@ Version: 1.0
 	height: ;
 	}
 	
-/* ---------- WP Default Classes ---------- */
+/* --------------- Generic Tags & Classes --------------- */
 
 .alignnone {
     margin: 0 10px 10px 0;
@@ -32,6 +39,7 @@ Version: 1.0
 .aligncenter {
     display: block;
     margin: 10px auto;
+	clear: both;
 	}
 
 .alignright {
@@ -43,17 +51,69 @@ Version: 1.0
     float: left;
     margin: 0 10px 10px 0;
 	}
+	
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+	}
+	
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0 auto;
+	}
+	
+.wp-caption-text {
+	text-align: center;
+	}
+	
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+	}
 
-#content .entry ul, #content .entry ol {
+.entry ul, .entry ol {
     margin: 10px 20px;
     }
 
-#content .entry ul li {
+.entry ul li {
     margin: 5px 0;
     list-style-type: disc;
     }
 
-#content .entry ol li {
+.entry ol li {
     margin: 5px 0;
     list-style-type: decimal;
     }
+	
+.entry li > ul,
+.entry li > ol {
+	margin-bottom: 0;
+	margin-left: 10px;
+	}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+	}
+
+dt {
+	font-weight: bold;
+	}
+	
+dd {
+	margin: 0 1.5em 1.5em;
+	}
+	
+figure {
+	margin: 0;
+	}
+	
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+	}
+	
+th {
+	font-weight: bold;
+	}	
