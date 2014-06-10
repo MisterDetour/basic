@@ -52,7 +52,7 @@ function basic_load_scripts() {
 	}
 }
 
-add_action( 'wp_enqueue_scripts', 'lbasic_oad_scripts' );
+add_action( 'wp_enqueue_scripts', 'basic_load_scripts' );
 
 // Format title element
 function basic_title( $title, $sep ) {
