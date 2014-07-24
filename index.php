@@ -12,8 +12,7 @@
 							<h2 class="post-title"><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
 					
 							<div class="post-date">
-								<p>Posted on: <?php the_time('F jS, Y') ?> by <?php the_author() ?>
-								<?php comments_popup_link('No Comments', '1 Comment', '% Comments', 'comments-link', ''); ?></p>
+								<p>Posted on: <time datetime="<?php the_time('c'); ?>"><?php the_time('F jS, Y'); ?></time> by <?php the_author() ?> <?php comments_popup_link('No Comments', '1 Comment', '% Comments', 'comments-link', ''); ?></p>
 							</div><!-- .post-date -->
 						</header><!-- .post-header -->
 					

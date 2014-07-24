@@ -10,7 +10,7 @@
 						<h1 class="post-title"><?php the_title() ?></h1>
 					
 						<div class="post-date">
-							<p>Posted on: <?php the_time('F jS, Y') ?> by <?php the_author() ?></p>
+							<p>Posted on: <time datetime="<?php the_time('c'); ?>"><?php the_time('F jS, Y'); ?></time> by <?php the_author() ?></p>
 						</div><!-- .post-date -->
 					</header><!-- .post-header -->
 					
