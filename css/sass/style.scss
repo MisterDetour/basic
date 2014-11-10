@@ -1,0 +1,121 @@
+/*
+Theme Name: Basic
+Theme URI: http://www.hybridvigordesign.com/themes/basic
+Description: A very basic stripped down starter theme for using wordpress as a small site cms.
+Author: David LaTour
+Author URI: http://www.hybridvigordesign.com
+Version: 1.0
+*/
+
+@import "reset";
+
+/* --------------- Basic Layout --------------- */
+
+body {
+	
+	}	
+
+/* --------------- Logo --------------- */
+
+#logo {
+	margin: 0;
+	padding: 0;
+	}
+	
+#logo a {
+	text-indent: -9999px;
+	font-size: 1%;
+	overflow: hidden;
+	display: block;
+	background: url(images/logo.png);
+	width: 20px;
+	height: 20px;
+	}
+	
+/* --------------- Generic Tags & Classes --------------- */
+
+.alignnone {
+    margin: 0 10px 10px 0;
+	}
+
+.aligncenter {
+    display: block;
+    margin: 10px auto;
+	clear: both;
+	}
+
+.alignright {
+    float: right;
+    margin: 0 0 10px 10px;
+	}
+
+.alignleft {
+    float: left;
+    margin: 0 10px 10px 0;
+	}
+	
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+	}
+	
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 0 auto;
+	}
+	
+.wp-caption-text {
+	text-align: center;
+	}
+	
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+	}
+
+.entry ul, .entry ol {
+    margin: 10px 20px;
+    }
+
+.entry ul li {
+    margin: 5px 0;
+    list-style-type: disc;
+    }
+
+.entry ol li {
+    margin: 5px 0;
+    list-style-type: decimal;
+    }
+	
+.entry li > ul,
+.entry li > ol {
+	margin-bottom: 0;
+	margin-left: 10px;
+	}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+	}
+
+dt {
+	font-weight: bold;
+	}
+	
+dd {
+	margin: 0 1.5em 1.5em;
+	}
+	
+figure {
+	margin: 0;
+	}
+	
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+	}
+	
+th {
+	font-weight: bold;
+	}	
