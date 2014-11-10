@@ -37,7 +37,7 @@ function register_basic_sidebars() {
 	}
 }
 
-add_action( 'init', 'register_basic_sidebars' );
+add_action( 'widgets_init', 'register_basic_sidebars' );
 
 // Load Javascript & CSS files
 function basic_load_scripts() {

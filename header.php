@@ -27,7 +27,7 @@
 
 	<header id="header" role="banner">
 		<?php $tag = ( is_front_page() || is_home() ) ? 'h1' : 'div'; ?>
-		<<?php echo $tag; ?> id="logo"><a href="<?php bloginfo('home') ?>/" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></<?php echo $tag; ?>>
+		<<?php echo $tag; ?> id="logo"><a href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></<?php echo $tag; ?>>
 		
 		<nav id="nav" role="navigation">
 			<h2 class="assistive-text">Menu</h2>
