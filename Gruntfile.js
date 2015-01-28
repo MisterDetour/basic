@@ -28,6 +28,18 @@ module.exports = function(grunt) {
 	        'js/*.js'
 	      ]
 	    },
+		autoprefixer: {
+			options: {
+	          browsers: [
+	            'last 2 versions',
+	            'Explorer >= 9',
+	            'Android >= 3'
+	          ]
+	        },
+			files: {
+				'style.css': 'style.css'
+			}
+	  	},
 		watch: {
 			options: {
 		        livereload: true,
@@ -43,16 +55,11 @@ module.exports = function(grunt) {
 				files: '<%= jshint.all %>',
 				tasks: ['jshint']
 			}
-		},
-		autoprefixer: {
-			files: {
-				'style.css': 'style.css'
-			}
-	  	}
+		}
 	});
 
 	require('load-grunt-tasks')(grunt);
 
-	grunt.registerTask('default', ['imagemin', 'sass', 'watch', 'autoprefixer']);
+	grunt.registerTask('default', ['imagemin', 'sass', 'autoprefixer', 'watch']);
 
 };
