@@ -23,18 +23,18 @@
 
 <body <?php body_class(); ?>>
 	
-<div id="wrapper">
+<div class="wrapper">
 
-	<header id="header" role="banner">
+	<header class="site-header" role="banner">
 		<?php $tag = ( is_front_page() || is_home() ) ? 'h1' : 'div'; ?>
 		<<?php echo $tag; ?> id="logo"><a href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo('name') ?>" rel="home"><?php bloginfo('name') ?></a></<?php echo $tag; ?>>
 		
-		<nav id="nav" role="navigation">
+		<nav class="main-nav" role="navigation">
 			<h2 class="assistive-text">Menu</h2>
 			<div class="assistive-text skip-link"><a href="#content" title="Skip to content'">Skip to content</a></div>
 			
 			<?php wp_nav_menu(array( 'theme_location' => 'header-menu', 'container_id' => 'nav-menu', 'container_class' => 'menu-wrap', 'menu_id' => 'main-menu')); ?>
-		</nav><!-- #nav -->
-	</header><!--  #header -->
+		</nav><!-- .main-nav -->
+	</header><!--  .site-header -->
 	
-	<div id="primary">
+	<div class="main">

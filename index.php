@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-		<main id="content" role="main">
+		<main class="primary-content" role="main">
 		
 			<?php if (have_posts()) : ?>
 				
@@ -45,7 +45,7 @@
 					
 			<?php endif; ?>
 
-		</main><!-- #content -->
+		</main><!-- .primary-content -->
 		
 		<?php get_sidebar(); ?>
 

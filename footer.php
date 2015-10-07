@@ -1,13 +1,13 @@
 
-	</div><!-- #primary -->
+	</div><!-- .main -->
 	
-	<footer id="footer" role="contentinfo">
+	<footer class="site-footer" role="contentinfo">
 		
 		<p class="copy">&copy;<?php echo date("Y") . ' ' . get_bloginfo('name'); ?></p>
 		
-	</footer><!-- #footer -->
+	</footer><!-- .site-footer -->
 
-</div><!-- #wrapper -->
+</div><!-- .wrapper -->
 
 <?php wp_footer(); ?>
 

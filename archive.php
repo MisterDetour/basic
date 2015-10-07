@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-		<main id="content" role="main">
+		<main class="primary-content" role="main">
 		
 			<header class="page-header">
 				<?php if (is_category()) : ?>
@@ -63,7 +63,7 @@
 				
 		<?php endif; ?>
 
-	</main><!-- #content -->
+	</main><!-- .primary-content -->
 	
 	<?php get_sidebar(); ?>
 

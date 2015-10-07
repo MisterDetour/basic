@@ -6,7 +6,7 @@
 
 get_header(); ?>
 		
-		<main id="content" role="main">
+		<main class="primary-content" role="main">
 
 			<?php while (have_posts()) : the_post(); ?>
 				
@@ -26,7 +26,7 @@ get_header(); ?>
 				
 			<?php endwhile; ?>
 			
-		</main><!-- #content -->
+		</main><!-- .primary-content -->
 			
 		<?php get_sidebar(); ?>
 
