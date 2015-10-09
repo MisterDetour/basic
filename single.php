@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 		
-		<main class="primary-content" role="main">
+		<main class="primary" role="main">
 		
 			<?php while (have_posts()) : the_post(); ?>
 
@@ -35,7 +35,7 @@
 				
 			<?php endwhile; ?>
 
-		</main><!-- .primary-content -->
+		</main><!-- .primary -->
 		
 		<?php get_sidebar(); ?>
 

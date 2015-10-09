@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-		<main class="primary-content" role="main">
+		<main class="primary" role="main">
 				
 			<header class="page-header">
 				<h1 class="page-title">Search Results for: <span><?php echo get_search_query(); ?></span></h1>
@@ -49,7 +49,7 @@
 					
 			<?php endif; ?>
 
-		</main><!-- .primary-content -->
+		</main><!-- .primary -->
 		
 		<?php get_sidebar(); ?>
 
