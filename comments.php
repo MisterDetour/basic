@@ -8,7 +8,7 @@ if ( post_password_required() ) {
 
 	<?php if ( have_comments() ) : ?>
 		<header>
-			<h2 class="comments-title"><?php comments_number('No Responses', 'One Response', '% Responses' ); ?></h2>
+			<h2 class="comments-title"><?php comments_number( 'No Responses', 'One Response', '% Responses' ); ?></h2>
 		</header>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
@@ -38,7 +38,7 @@ if ( post_password_required() ) {
 
 	<?php endif; ?>
 
-	<?php if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+	<?php if ( ! comments_open() && '0' !== get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
 		<p class="no-comments">Comments are closed.</p>
 	<?php endif; ?>
 

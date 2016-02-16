@@ -1,6 +1,7 @@
 <?php
-
-// Do some basic theme set up
+/**
+ * Do some basic theme set up
+ */
 function basic_theme_setup() {
 	remove_action( 'wp_head', 'rsd_link' );
 	remove_action( 'wp_head', 'wlwmanifest_link' );
@@ -12,20 +13,24 @@ function basic_theme_setup() {
 
 add_action( 'init', 'basic_theme_setup' );
 
-// Register navigation menus
+/**
+ * Register navigation menus
+ */
 function register_basic_menus() {
 	register_nav_menus(
-    	array(
-			'header-menu' => 'Header Menu'
+		array(
+			'header-menu' => 'Header Menu',
 		)
-  	);
+	);
 }
 
-add_action('init', 'register_basic_menus');
+add_action( 'init', 'register_basic_menus' );
 
-// Register dynamic sidebars
+/**
+ * Register dynamic sidebars
+ */
 function register_basic_sidebars() {
-	if(function_exists('register_sidebar')) {
+	if ( function_exists( 'register_sidebar' ) ) {
 		register_sidebar(array(
 	  		'name' => 'Primary Sidebar',
 	  		'description' => 'This is the primary page sidebar.',
@@ -39,13 +44,15 @@ function register_basic_sidebars() {
 
 add_action( 'widgets_init', 'register_basic_sidebars' );
 
-// Load Javascript & CSS files
+/**
+ * Load Javascript & CSS files
+ */
 function basic_load_scripts() {
 	
 	wp_enqueue_style( 'reset', get_stylesheet_directory_uri() . '/css/reset.css' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
-	wp_enqueue_script('custom', get_stylesheet_directory_uri() . '/js/custom.js', array('jquery'), false, true );
+	wp_enqueue_script('custom', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), false, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -53,13 +60,15 @@ function basic_load_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'basic_load_scripts' );
 
-// Format title element
+/**
+ * Format title element
+ */
 function basic_title( $title, $sep ) {
 	global $page, $paged;
 
 	if ( is_feed() ) return $title;
 
-	// Add the blog name
+	// Add the blog name.
 	$title .= get_bloginfo( 'name' );
 
 	// Add the blog description for the home/front page.
@@ -67,7 +76,7 @@ function basic_title( $title, $sep ) {
 	if ( $site_description && ( is_home() || is_front_page() ) )
 		$title .= " $sep $site_description";
 
-	// Add a page number if necessary:
+	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 )
 		$title .= " $sep " . sprintf( __( 'Page %s', '_s' ), max( $paged, $page ) );
 
