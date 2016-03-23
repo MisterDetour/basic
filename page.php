@@ -2,7 +2,7 @@
 		
 		<main class="primary" role="main">
 			
-			<?php while (have_posts()) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 				
 				<article>	
 					<header class="page-header">
@@ -14,7 +14,7 @@
 					</div><!-- .entry -->
 			
 					<footer>
-						<?php edit_post_link('Edit this entry.', '<div>', '</div>'); ?>
+						<?php edit_post_link( 'Edit this entry.', '<div>', '</div>' ); ?>
 					</footer>
 				</article>
 			

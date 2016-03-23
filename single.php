@@ -2,7 +2,7 @@
 		
 		<main class="primary" role="main">
 		
-			<?php while (have_posts()) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
 
 				<article <?php post_class() ?> id="post-<?php the_ID(); ?>">
 					
@@ -10,7 +10,7 @@
 						<h1 class="post-title"><?php the_title() ?></h1>
 					
 						<div class="post-date">
-							<p>Posted on: <time datetime="<?php the_time('c'); ?>"><?php the_time('F jS, Y'); ?></time> by <?php the_author() ?></p>
+							<p>Posted on: <time datetime="<?php the_time( 'c' ); ?>"><?php the_time( 'F jS, Y' ); ?></time> by <?php the_author() ?></p>
 						</div><!-- .post-date -->
 					</header><!-- .post-header -->
 					
@@ -18,15 +18,15 @@
 			
 						<?php the_content() ?>
 
-						<?php wp_link_pages(array('before' => 'Pages: ', 'next_or_number' => 'number')); ?>
+						<?php wp_link_pages( array( 'before' => 'Pages: ', 'next_or_number' => 'number' ) ); ?>
 						
 					</div><!-- .entry -->
 					
-					<?php edit_post_link('Edit this entry.', '<div>', '</div>'); ?>
+					<?php edit_post_link( 'Edit this entry.', '<div>', '</div>' ); ?>
 					
 					<footer class="post-meta">
-						<p><?php the_tags('Tags: ', ', ', '<br />'); ?>
-						Posted in: <?php the_category(', ') ?></p>
+						<p><?php the_tags( 'Tags: ', ', ', '<br />' ); ?>
+						Posted in: <?php the_category( ', ' ) ?></p>
 					</footer><!-- .post-meta -->
 					
 				</article><!-- .post -->

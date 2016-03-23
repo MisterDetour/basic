@@ -37,7 +37,7 @@ function register_basic_sidebars() {
 	  		'before_title' => '<h2 class="widgettitle">',
 	  		'after_title' => '</h2>',
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
-	  		'after_widget' => '</div>'
+	  		'after_widget' => '</div>',
 		));
 	}
 }
@@ -48,11 +48,13 @@ add_action( 'widgets_init', 'register_basic_sidebars' );
  * Load Javascript & CSS files
  */
 function basic_load_scripts() {
-	
 	wp_enqueue_style( 'reset', get_stylesheet_directory_uri() . '/css/reset.css' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
-	wp_enqueue_script('custom', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'shiv', '//html5shiv.googlecode.com/svn/trunk/html5.js' );
+	wp_script_add_data( 'shiv', 'conditional', 'lt IE 9' );
+	
+	wp_enqueue_script( 'custom', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), false, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -62,6 +64,9 @@ add_action( 'wp_enqueue_scripts', 'basic_load_scripts' );
 
 /**
  * Format title element
+ *
+ * @param string $title Page title.
+ * @param string $sep Page title separator.
  */
 function basic_title( $title, $sep ) {
 	global $page, $paged;
