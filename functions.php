@@ -50,9 +50,6 @@ add_action( 'widgets_init', 'register_basic_sidebars' );
 function basic_load_scripts() {
 	wp_enqueue_style( 'reset', get_stylesheet_directory_uri() . '/css/reset.css' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
-
-	wp_enqueue_script( 'shiv', get_stylesheet_directory_uri() . '/js/vendor/html5shiv.js' );
-	wp_script_add_data( 'shiv', 'conditional', 'lt IE 9' );
 	
 	wp_enqueue_script( 'custom', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), false, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
