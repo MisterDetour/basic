@@ -17,7 +17,7 @@
 						</header><!-- .post-header -->
 					
 						<div class="entry">
-							<?php the_excerpt() ?>
+							<?php the_excerpt(); ?>
 						</div><!-- .entry -->
 					
 						<footer class="post-meta">

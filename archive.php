@@ -35,7 +35,7 @@
 						</header><!-- .post-header -->
 				
 						<div class="entry">
-							<?php the_content() ?>
+							<?php the_excerpt(); ?>
 						</div><!-- .entry -->
 				
 						<footer class="post-meta">
@@ -49,8 +49,8 @@
 				<?php endwhile; ?>
 		
 				<div class="navigation">
-					<div class="next"><?php next_posts_link( '&laquo; Older Entries' ) ?></div>
-					<div class="prev"><?php previous_posts_link( 'Newer Entries &raquo;' ) ?></div>
+					<div class="next"><?php next_posts_link( '&laquo; Older Entries' ); ?></div>
+					<div class="prev"><?php previous_posts_link( 'Newer Entries &raquo;' ); ?></div>
 				</div>
 		
 		<?php else : ?>
