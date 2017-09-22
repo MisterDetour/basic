@@ -33,7 +33,7 @@ function register_basic_sidebars() {
 	if ( function_exists( 'register_sidebar' ) ) {
 		register_sidebar(array(
 	  		'name' => 'Primary Sidebar',
-	  		'description' => 'This is the primary page sidebar.',
+	  		'id' => 'primary-sidebar',
 	  		'before_title' => '<h2 class="widgettitle">',
 	  		'after_title' => '</h2>',
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
