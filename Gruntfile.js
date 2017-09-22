@@ -28,19 +28,6 @@ module.exports = function(grunt) {
 	        'js/*.js'
 	      ]
 	    },
-	    grunticon: {
-		    myIcons: {
-		        files: [{
-		            expand: true,
-		            cwd: 'images/svg-source',
-		            src: ['*.svg', '*.png'],
-		            dest: "images/svg"
-		        }],
-		        options: {
-		        	enhanceSVG: true
-		        }
-		    }
-		},
 		autoprefixer: {
 			options: {
 	          browsers: [
@@ -73,6 +60,6 @@ module.exports = function(grunt) {
 
 	require('load-grunt-tasks')(grunt);
 
-	grunt.registerTask('default', ['imagemin', 'sass', 'grunticon', 'autoprefixer', 'watch']);
+	grunt.registerTask('default', ['imagemin', 'sass', 'autoprefixer', 'watch']);
 
 };
