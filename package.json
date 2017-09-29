@@ -1,6 +1,11 @@
 {
   "name": "basic",
   "version": "1.0.0",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "ie >= 9"
+  ],
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "grunt": "~1.0.1",
