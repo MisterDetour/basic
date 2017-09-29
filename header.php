@@ -5,8 +5,6 @@
 <!--[if gt IE 9]><!--><html <?php language_attributes(); ?>><!--<![endif]-->
 
 <head>
-
-	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
