@@ -22,31 +22,30 @@ module.exports = function(grunt) {
 		        }
 		    } 
 		},
+		postcss: {
+			options: {
+				processors: [
+					require('autoprefixer')()
+				]
+			},
+			dist: {
+				src: 'style.css',
+				dest: 'style.css'
+			}
+		},
 		jshint: {
 	      all: [
 	        'Gruntfile.js',
 	        'js/*.js'
 	      ]
 	    },
-		autoprefixer: {
-			options: {
-	          browsers: [
-	            'last 2 versions',
-	            'Explorer >= 9',
-	            'Android >= 3'
-	          ]
-	        },
-			files: {
-				'style.css': 'style.css'
-			}
-	  	},
 		watch: {
 			options: {
 		        livereload: true,
 		    },
 			css: {
 			    files: ['css/sass/*.scss'],
-			    tasks: ['sass', 'autoprefixer'],
+			    tasks: ['sass', 'postcss'],
 			    options: {
 			        spawn: false,
 			    }
@@ -60,6 +59,6 @@ module.exports = function(grunt) {
 
 	require('load-grunt-tasks')(grunt);
 
-	grunt.registerTask('default', ['imagemin', 'sass', 'autoprefixer', 'watch']);
+	grunt.registerTask('default', ['imagemin', 'sass', 'postcss', 'watch']);
 
 };
