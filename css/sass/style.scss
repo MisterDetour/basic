@@ -1,6 +1,4 @@
 
-@import "reset";
-
 /* --------------- Basic Layout --------------- */
 
 body {
@@ -12,16 +10,6 @@ body {
 #logo {
 	margin: 0;
 	padding: 0;
-	}
-	
-#logo a {
-	text-indent: -9999px;
-	font-size: 1%;
-	overflow: hidden;
-	display: block;
-	background: url(images/logo.png);
-	width: 20px;
-	height: 20px;
 	}
 	
 /* --------------- Generic Tags & Classes --------------- */

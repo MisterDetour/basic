@@ -13,25 +13,47 @@ module.exports = function(grunt) {
 		    }
 		},
 		sass: {
-		    dist: {
+			bootstrap: {
+		        options: {
+		            style: 'expanded'
+		        },
+		        files: {
+		            'bootstrap/bootstrap.min.css': 'bootstrap/bootstrap.scss'
+		        }
+			},
+			theme: {
 		        options: {
 		            style: 'compressed'
 		        },
 		        files: {
 		            'css/style.css': 'css/sass/style.scss'
 		        }
-		    } 
+			},
 		},
 		postcss: {
-			options: {
-				processors: [
-					require('autoprefixer')()
-				]
+			bootstrap: {
+				options: {
+					processors: [
+						require('autoprefixer')()
+					]
+				},
+				dist: {
+					src: 'bootstrap/bootstrap.min.css',
+					dest: 'bootstrap/bootstrap.min.css'
+				}
 			},
-			dist: {
-				src: 'style.css',
-				dest: 'style.css'
-			}
+			theme: {
+				options: {
+					processors: [
+						require('autoprefixer')()
+					]
+				},
+				dist: {
+					src: 'style.css',
+					dest: 'style.css'
+				}
+			},
+			
 		},
 		jshint: {
 	      all: [
@@ -45,7 +67,7 @@ module.exports = function(grunt) {
 		    },
 			css: {
 			    files: ['css/sass/*.scss'],
-			    tasks: ['sass', 'postcss'],
+			    tasks: ['sass:theme', 'postcss:theme'],
 			    options: {
 			        spawn: false,
 			    }
@@ -59,6 +81,8 @@ module.exports = function(grunt) {
 
 	require('load-grunt-tasks')(grunt);
 
-	grunt.registerTask('default', ['imagemin', 'sass', 'postcss', 'watch']);
+	grunt.registerTask('default', ['imagemin', 'sass:theme', 'postcss:theme', 'watch']);
+
+	grunt.registerTask('bootstrap', ['sass:bootstrap', 'postcss:bootstrap']);
 
 };
