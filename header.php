@@ -24,15 +24,15 @@
 <div class="wrapper">
 
 	<header class="site-header" role="banner">
-		<?php $tag = ( is_front_page() || is_home() ) ? 'h1' : 'div'; ?>
-		<<?php echo $tag; ?> id="logo"><a href="<?php echo esc_url( home_url() ); ?>" title="<?php bloginfo( 'name' ) ?>" rel="home"><?php bloginfo( 'name' ) ?></a></<?php echo $tag; ?>>
-		
+
         <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
             <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="#">Navbar</a>
+                <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>">
+                    <?php bloginfo( 'name' ); ?>
+                </a>
                 <?php
                 wp_nav_menu( array(
                 'theme_location'    => 'header-menu',
