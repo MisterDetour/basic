@@ -29,8 +29,8 @@ module.exports = function(grunt) {
 				]
 			},
 			dist: {
-				src: 'style.css',
-				dest: 'style.css'
+				src: 'css/style.css',
+				dest: 'css/style.css'
 			}
 		},
 		jshint: {
