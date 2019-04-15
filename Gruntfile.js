@@ -15,7 +15,7 @@ module.exports = function(grunt) {
 		sass: {
 			bootstrap: {
 		        options: {
-		            style: 'expanded'
+					style: 'compressed'
 		        },
 		        files: {
 		            'bootstrap/bootstrap.min.css': 'bootstrap/bootstrap.scss'
@@ -31,29 +31,19 @@ module.exports = function(grunt) {
 			},
 		},
 		postcss: {
+			options: {
+				processors: [
+					require('autoprefixer')()
+				]
+			},
 			bootstrap: {
-				options: {
-					processors: [
-						require('autoprefixer')()
-					]
-				},
-				dist: {
-					src: 'bootstrap/bootstrap.min.css',
-					dest: 'bootstrap/bootstrap.min.css'
-				}
+				src: 'bootstrap/bootstrap.min.css',
+				dest: 'bootstrap/bootstrap.min.css'
 			},
 			theme: {
-				options: {
-					processors: [
-						require('autoprefixer')()
-					]
-				},
-				dist: {
-					src: 'css/style.css',
-					dest: 'css/style.css'
-				}
+				src: 'css/style.css',
+				dest: 'css/style.css'
 			},
-			
 		},
 		jshint: {
 	      all: [

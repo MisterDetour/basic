@@ -1,15 +1,30 @@
 
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins/_breakpoints";
+
+@import "vars";
+
 /* --------------- Basic Layout --------------- */
 
 body {
-	
-	}	
+}
 
 /* --------------- Logo --------------- */
 
 #logo {
 	margin: 0;
 	padding: 0;
+	}
+	
+#logo a {
+	text-indent: -9999px;
+	font-size: 1%;
+	overflow: hidden;
+	display: block;
+	background: url(images/logo.png);
+	width: 20px;
+	height: 20px;
 	}
 	
 /* --------------- Generic Tags & Classes --------------- */

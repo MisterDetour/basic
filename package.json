@@ -2,8 +2,9 @@
   "name": "basic",
   "version": "1.0.0",
   "browserslist": [
-    "last 1 major version",
     ">= 1%",
+    "last 1 major version",
+    "not dead",
     "Chrome >= 45",
     "Firefox >= 38",
     "Edge >= 12",
@@ -15,6 +16,7 @@
   ],
   "devDependencies": {
     "autoprefixer": "^9.1.5",
+    "bootstrap": "^4.3.1",
     "grunt": "~1.0.1",
     "grunt-contrib-imagemin": "~2.0.1",
     "grunt-contrib-jshint": "^1.1.0",
