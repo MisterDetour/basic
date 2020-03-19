@@ -13,14 +13,22 @@ module.exports = function(grunt) {
 		    }
 		},
 		sass: {
-		    dist: {
+			bootstrap: {
+		        options: {
+					style: 'compressed'
+		        },
+		        files: {
+		            'bootstrap/bootstrap.min.css': 'bootstrap/bootstrap.scss'
+		        }
+			},
+			theme: {
 		        options: {
 		            style: 'compressed'
 		        },
 		        files: {
 		            'css/style.css': 'css/sass/style.scss'
 		        }
-		    } 
+			},
 		},
 		postcss: {
 			options: {
@@ -28,10 +36,14 @@ module.exports = function(grunt) {
 					require('autoprefixer')()
 				]
 			},
-			dist: {
+			bootstrap: {
+				src: 'bootstrap/bootstrap.min.css',
+				dest: 'bootstrap/bootstrap.min.css'
+			},
+			theme: {
 				src: 'css/style.css',
 				dest: 'css/style.css'
-			}
+			},
 		},
 		jshint: {
 	      all: [
@@ -45,7 +57,7 @@ module.exports = function(grunt) {
 		    },
 			css: {
 			    files: ['css/sass/*.scss'],
-			    tasks: ['sass', 'postcss'],
+			    tasks: ['sass:theme', 'postcss:theme'],
 			    options: {
 			        spawn: false,
 			    }
@@ -59,6 +71,8 @@ module.exports = function(grunt) {
 
 	require('load-grunt-tasks')(grunt);
 
-	grunt.registerTask('default', ['imagemin', 'sass', 'postcss', 'watch']);
+	grunt.registerTask('default', ['imagemin', 'sass:theme', 'postcss:theme', 'watch']);
+
+	grunt.registerTask('bootstrap', ['sass:bootstrap', 'postcss:bootstrap']);
 
 };

@@ -11,7 +11,7 @@ get_header(); ?>
 				
 				<article>
 					<header class="page-header">
-						<h2 class="page-title"><?php the_title() ?></h2>
+						<h1 class="page-title"><?php the_title() ?></h1>
 					</header><!-- .page-header -->
 	
 					<div class="entry">
