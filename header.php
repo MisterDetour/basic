@@ -12,10 +12,6 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	
 	<?php wp_head(); ?>
-
-	<!--[if lt IE 9]>
-		<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/vendor/html5shiv.js"></script>
-	<![endif]-->
 	
 </head>
 
