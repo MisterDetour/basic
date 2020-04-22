@@ -26,6 +26,7 @@
                 <a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>">
                     <?php bloginfo( 'name' ); ?>
                 </a>
+                
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
