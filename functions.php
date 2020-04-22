@@ -36,14 +36,14 @@ add_action( 'init', 'register_basic_menus' );
  */
 function register_basic_sidebars() {
 	if ( function_exists( 'register_sidebar' ) ) {
-		register_sidebar(array(
+		register_sidebar( array(
 	  		'name' => 'Primary Sidebar',
 	  		'id' => 'primary-sidebar',
 	  		'before_title' => '<h2 class="widgettitle">',
 	  		'after_title' => '</h2>',
 			'before_widget' => '<div id="%1$s" class="widget %2$s">',
 	  		'after_widget' => '</div>',
-		));
+		) );
 	}
 }
 
