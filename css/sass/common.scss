@@ -5,6 +5,11 @@ body {
 	
 /* --------------- Generic Tags & Classes --------------- */
 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
 .alignnone {
     margin: 0 10px 10px 0;
 }
