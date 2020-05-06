@@ -37,7 +37,7 @@ module.exports = function(grunt) {
 					require('autoprefixer')()
 				]
 			},
-			bootstrap: {
+			bulma: {
 				src: 'bulma/bulma.min.css',
 				dest: 'bulma/bulma.min.css'
 			},
@@ -74,6 +74,6 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('default', ['imagemin', 'sass:theme', 'postcss:theme', 'watch']);
 
-	grunt.registerTask('bootstrap', ['sass:bulma', 'postcss:bulma']);
+	grunt.registerTask('bulma', ['sass:bulma', 'postcss:bulma']);
 
 };
