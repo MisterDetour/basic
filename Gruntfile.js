@@ -13,12 +13,12 @@ module.exports = function(grunt) {
 		    }
 		},
 		sass: {
-			bootstrap: {
+			bulma: {
 		        options: {
 					style: 'compressed'
 		        },
 		        files: {
-		            'bootstrap/bootstrap.min.css': 'bootstrap/bootstrap.scss'
+		            'bulma/bulma.min.css': 'bulma/bulma.scss'
 		        }
 			},
 			theme: {
@@ -38,8 +38,8 @@ module.exports = function(grunt) {
 				]
 			},
 			bootstrap: {
-				src: 'bootstrap/bootstrap.min.css',
-				dest: 'bootstrap/bootstrap.min.css'
+				src: 'bulma/bulma.min.css',
+				dest: 'bulma/bulma.min.css'
 			},
 			theme: {
 				src: 'css/style.css',
@@ -74,6 +74,6 @@ module.exports = function(grunt) {
 
 	grunt.registerTask('default', ['imagemin', 'sass:theme', 'postcss:theme', 'watch']);
 
-	grunt.registerTask('bootstrap', ['sass:bootstrap', 'postcss:bootstrap']);
+	grunt.registerTask('bootstrap', ['sass:bulma', 'postcss:bulma']);
 
 };
