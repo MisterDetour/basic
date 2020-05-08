@@ -1,5 +1,8 @@
 <?php
 
+// Bulma Nav walker
+require_once get_template_directory() . '/inc/navwalker.php';
+
 /**
  * Do some basic theme set up
  */
