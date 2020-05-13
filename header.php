@@ -19,6 +19,8 @@
 
 <div class="wrapper">
 
+    <a class="skip-link screen-reader-text" href="#primary">Skip to content</a>
+
 	<header class="site-header" role="banner">
 
         <nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
@@ -47,4 +49,4 @@
         </nav><!-- .navbar -->
 	</header><!--  .site-header -->
 	
-	<div class="main">
+	<div id="primary" class="main">
