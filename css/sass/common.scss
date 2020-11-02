@@ -77,6 +77,39 @@ blockquote.wp-block-quote {
 	}
 }
 
+/* --------------- Horizontal Rules --------------- */
+
+.wp-block-separator,
+hr {
+
+	&:not(.is-style-dots) {
+		background-color: grey;
+		border: 0;
+		height: 1px;
+	}
+
+	&:not(.is-style-wide):not(.is-style-dots) {
+		width: 100%;
+		height: 4px;
+		background: transparent;
+
+		&::before {
+			content: '';
+			display: block;
+			height: 4px;
+			width: 40px;
+			background: grey;
+		}
+	}
+
+	&.is-style-dots:before {
+		color: grey;
+		font-size: 18px;
+		letter-spacing: 12px;
+		padding-left: 12px;
+	}
+}
+
 /* --------------- Generic Tags & Classes --------------- */
 
 img {
