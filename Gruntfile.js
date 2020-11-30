@@ -51,11 +51,8 @@ module.exports = function(grunt) {
 	        'Gruntfile.js',
 	        'js/*.js'
 	      ]
-	    },
+		},
 		watch: {
-			options: {
-		        livereload: true,
-		    },
 			css: {
 			    files: ['css/sass/*.scss'],
 			    tasks: ['sass:theme', 'postcss:theme'],
@@ -67,12 +64,25 @@ module.exports = function(grunt) {
 				files: '<%= jshint.all %>',
 				tasks: ['jshint']
 			}
+		},
+		browserSync: {
+			bsFiles: {
+				src: [
+					'css/style.css',
+					'js/custom.js',
+					'*.php'
+				]
+			},
+			options: {
+				watchTask: true,
+				proxy: 'sandbox.loc'
+			}
 		}
 	});
 
 	require('load-grunt-tasks')(grunt);
 
-	grunt.registerTask('default', ['imagemin', 'sass:theme', 'postcss:theme', 'watch']);
+	grunt.registerTask('default', ['imagemin', 'browserSync', 'sass:theme', 'postcss:theme', 'watch']);
 
 	grunt.registerTask('bootstrap', ['sass:bootstrap', 'postcss:bootstrap']);
 
