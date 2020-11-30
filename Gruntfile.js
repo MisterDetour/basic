@@ -26,7 +26,8 @@ module.exports = function(grunt) {
 		            style: 'compressed'
 		        },
 		        files: {
-		            'css/style.css': 'css/sass/style.scss'
+								'css/style.css': 'css/sass/style.scss', 
+								'css/editor-style.css': 'css/sass/editor-style.scss'
 		        }
 			},
 		},
@@ -45,6 +46,10 @@ module.exports = function(grunt) {
 				src: 'css/style.css',
 				dest: 'css/style.css'
 			},
+			editor: {
+				src: 'css/editor-style.css',
+				dest: 'css/editor-style.css'
+			},
 		},
 		jshint: {
 	      all: [
@@ -55,7 +60,7 @@ module.exports = function(grunt) {
 		watch: {
 			css: {
 			    files: ['css/sass/*.scss'],
-			    tasks: ['sass:theme', 'postcss:theme'],
+			    tasks: ['sass:theme', 'postcss:theme', 'postcss:editor'],
 			    options: {
 			        spawn: false,
 			    }
@@ -82,7 +87,7 @@ module.exports = function(grunt) {
 
 	require('load-grunt-tasks')(grunt);
 
-	grunt.registerTask('default', ['imagemin', 'browserSync', 'sass:theme', 'postcss:theme', 'watch']);
+	grunt.registerTask('default', ['imagemin', 'browserSync', 'sass:theme', 'postcss:theme', 'postcss:editor','watch']);
 
 	grunt.registerTask('bootstrap', ['sass:bootstrap', 'postcss:bootstrap']);
 

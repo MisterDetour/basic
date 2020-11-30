@@ -3,6 +3,113 @@
 body {
 }
 
+.container-fluid {
+	max-width: $container;
+	margin: 0 auto;
+}
+
+.wrapper {
+	overflow: hidden;
+}
+
+/* --------------- Blockquote --------------- */
+
+blockquote,
+blockquote.wp-block-quote {
+	background: transparent;
+	text-align: left;
+
+	p {
+		font-size: 18px;
+		font-style: normal;
+		font-weight: normal;
+	}
+
+	cite,
+	.wp-block-quote__citation {
+		display: block;
+		font-size: 15px;
+		font-weight: bold;
+		margin-top: 12px;
+	}
+
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+
+	&.is-large,
+	&.is-style-large {
+
+		p {
+			font-size: 24px;
+		}
+
+		cite,
+		.wp-block-quote__citation {
+			font-size: 16px;
+		}
+	}
+
+}
+
+/* --------------- Pull Quote --------------- */
+
+.wp-block-pullquote {
+	border: none;
+	padding: 0;
+
+	blockquote {
+		border-left: 0;
+		border-top: 5px solid lightgrey;
+		border-bottom: 5px solid lightgrey;
+		padding: 16px 0;
+		text-align: center;
+		max-width: 50%;
+		margin: 0 auto;
+	}
+
+	&.alignleft,
+	&.alignright {
+
+		blockquote {
+			max-width: 100%;
+		}
+	}
+}
+
+/* --------------- Horizontal Rules --------------- */
+
+.wp-block-separator,
+hr {
+
+	&:not(.is-style-dots) {
+		background-color: grey;
+		border: 0;
+		height: 1px;
+	}
+
+	&:not(.is-style-wide):not(.is-style-dots) {
+		width: 100%;
+		height: 4px;
+		background: transparent;
+
+		&::before {
+			content: '';
+			display: block;
+			height: 4px;
+			width: 40px;
+			background: grey;
+		}
+	}
+
+	&.is-style-dots:before {
+		color: grey;
+		font-size: 18px;
+		letter-spacing: 12px;
+		padding-left: 12px;
+	}
+}
+
 /* --------------- Generic Tags & Classes --------------- */
 
 img {
@@ -28,6 +135,21 @@ img {
 .alignleft {
     float: left;
     margin: 0 10px 10px 0;
+}
+
+.alignfull, 
+.alignwide {
+	margin: 20px calc(50% - 50vw);
+	max-width: 100vw;
+	width: 100vw;
+}
+
+@media (min-width: $alignwide) {
+	.alignwide {
+		margin: 20px -100px;
+		max-width: $container + 200px;
+		width: $container + 200px;
+	}
 }
 	
 .wp-caption {
