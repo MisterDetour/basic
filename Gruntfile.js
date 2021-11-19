@@ -26,8 +26,8 @@ module.exports = function(grunt) {
 		            style: 'compressed'
 		        },
 		        files: {
-								'css/style.css': 'css/sass/style.scss', 
-								'css/editor-style.css': 'css/sass/editor-style.scss'
+					'css/style.css': 'css/sass/style.scss', 
+					'css/editor-style.css': 'css/sass/editor-style.scss'
 		        }
 			},
 		},
