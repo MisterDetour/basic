@@ -80,7 +80,7 @@ module.exports = function(grunt) {
 			},
 			options: {
 				watchTask: true,
-				proxy: 'sandbox.loc'
+				proxy: 'sandbox.local'
 			}
 		}
 	});
