@@ -40,9 +40,7 @@
                     'container'         => 'div',
                     'container_class'   => 'collapse navbar-collapse',
                     'container_id'      => 'navbar-collapse',
-                    'menu_class'        => 'nav navbar-nav',
-                    'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-                    'walker'            => new WP_Bootstrap_Navwalker(),
+                    'menu_class'        => 'nav navbar-nav'
                 ) );
                 ?>
             </div><!-- .container-fluid -->

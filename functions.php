@@ -1,8 +1,5 @@
 <?php
 
-// Bootstrap Nav walker
-require_once get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
-
 /**
  * Do some basic theme set up
  */

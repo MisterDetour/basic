@@ -1,2 +1,6 @@
-$container: 1000px;
-$alignwide: 1200px;
+$md: 782px;
+$md_mx: 781px;
+
+html {
+	--global-pad: 20px;
+}
