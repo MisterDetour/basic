@@ -9,7 +9,7 @@
 						<h1 class="page-title"><?php the_title() ?></h1>
 					</header><!-- .page-header -->
 			
-					<div class="entry">
+					<div class="entry is-layout-constrained">
 						<?php the_content() ?>
 					</div><!-- .entry -->
 			
