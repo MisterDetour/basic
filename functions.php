@@ -92,3 +92,24 @@ function basic_title( $title, $sep ) {
 }
 
 add_filter( 'wp_title', 'basic_title', 10, 2 );
+
+/**
+ * Set html font size in admin, so REM units work
+ */
+function basic_admin_font_size() { 
+	global $current_screen;
+	if( $current_screen->base != 'widgets' 
+		&& (
+			$current_screen->base != 'post' 
+			|| !in_array( $current_screen->post_type, array( 'post', 'page' ) )
+		)
+	)
+		return;
+	?>
+	<style>
+		html { font-size: 62.5%; }
+	</style>
+	<?php
+}
+
+add_action( 'admin_head', 'basic_admin_font_size' );
