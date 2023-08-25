@@ -23,14 +23,14 @@
 
 	<header class="site-header" role="banner">
 
-		<nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
-			<div class="container-fluid">
+		<nav class="navbar" role="navigation">
+			<div class="container">
 				<a class="navbar-brand" href="<?php echo esc_url( home_url() ); ?>">
-					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg" alt="<?php bloginfo( 'name' ); ?>" width="100" height="100" loading="eager">
+					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.svg" alt="<?php bloginfo( 'name' ); ?>" width="217"  height="100" loading="eager">
 				</a>
 				
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<?php include( get_stylesheet_directory() . '/svg/menu.svg' ); ?>
 				</button>
 				
 				<?php
@@ -43,7 +43,7 @@
 					'menu_class'        => 'nav navbar-nav'
 				) );
 				?>
-			</div><!-- .container-fluid -->
+			</div><!-- .container -->
 		</nav><!-- .navbar -->
 	</header><!--  .site-header -->
 	
