@@ -32,6 +32,33 @@ body {
 	overflow: hidden;
 }
 
+/* --------------- Main Nav --------------- */
+
+.navbar {
+	.container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&-toggle {
+		@media (min-width: $md) {
+			display: none;
+		}
+	}
+
+	&-nav {
+		ul {
+			display: flex;
+			list-style-type: none;
+			column-gap: 10px;
+		}
+
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
 /* --------------- Blockquote --------------- */
 
 blockquote,
