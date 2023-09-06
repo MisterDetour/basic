@@ -52,10 +52,13 @@ module.exports = function(grunt) {
 			},
 		},
 		jshint: {
-	      all: [
-	        'Gruntfile.js',
-	        'js/*.js'
-	      ]
+			all: [
+				'Gruntfile.js',
+				'js/*.js'
+			], 
+			options: {
+				'esversion': 6,
+			}
 		},
 		watch: {
 			css: {
