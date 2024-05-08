@@ -23,7 +23,7 @@ body {
 }
 
 .entry.is-layout-constrained > :where(:not(.alignfull)),
-.wp-block-cover.alignfull .wp-block-cover__inner-container {
+.alignfull > * {
 	padding-left: var(--global-pad);
 	padding-right: var(--global-pad);
 }
