@@ -111,3 +111,21 @@ function basic_admin_font_size() {
 }
 
 add_action( 'admin_head', 'basic_admin_font_size' );
+
+/**
+ * Custom image sizes attribute
+ */
+function basic_custom_responsive_image_sizes( $sizes, $size, $image_src ) {
+	$width = $size[ 0 ];
+	$half = ceil( $width / 2 );
+
+	// If over 2000px, assume full width cover image
+	if ( $width > 1800 ) {
+		return '100vw';
+	}
+
+	// default
+	return '(max-width: 781px) 100vw, ' . $half . 'px';
+}
+
+add_filter( 'wp_calculate_image_sizes', 'basic_custom_responsive_image_sizes', 10 , 3 );
