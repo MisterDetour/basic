@@ -120,7 +120,7 @@ function basic_custom_responsive_image_sizes( $sizes, $size, $image_src ) {
 	$half = ceil( $width / 2 );
 
 	// If over 2000px, assume full width cover image
-	if ( $width > 1800 ) {
+	if ( $width > 2000 ) {
 		return '100vw';
 	}
 
