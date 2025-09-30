@@ -1,3 +1,5 @@
+@use "vars";
+
 /* --------------- Basic Layout --------------- */
 
 html { 
@@ -41,7 +43,7 @@ body {
 	}
 
 	&-toggle {
-		@media (min-width: $md) {
+		@media (min-width: vars.$md) {
 			display: none;
 		}
 	}
@@ -262,7 +264,7 @@ th {
 }
 
 .reverse-mb {
-	@media (max-width: $md_mx) {
+	@media (max-width: vars.$md_mx) {
 		.wp-block-column {
 			&:first-child {
 				order: 2;
