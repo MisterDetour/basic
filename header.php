@@ -30,7 +30,7 @@
 				</a>
 				
 				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
-					<?php include( get_stylesheet_directory() . '/svg/menu.svg' ); ?>
+					<?php include( get_stylesheet_directory() . '/images/menu.svg' ); ?>
 				</button>
 				
 				<?php
