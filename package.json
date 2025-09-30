@@ -15,12 +15,12 @@
 		"Opera >= 30"
 	],
 	"devDependencies": {
-		"autoprefixer": "^9.8.8",
-		"grunt": "^1.4.1",
+		"autoprefixer": "^9.8.6",
+		"grunt": "^1.6.1",
 		"grunt-browser-sync": "^2.2.0",
-		"grunt-contrib-imagemin": "~3.1.0",
-		"grunt-contrib-jshint": "^2.1.0",
-		"grunt-contrib-sass": "~1.0.0",
+		"grunt-contrib-imagemin": "~4.0.0",
+		"grunt-contrib-jshint": "^3.2.0",
+		"grunt-contrib-sass": "~2.0.0",
 		"grunt-contrib-watch": "~1.1.0",
 		"grunt-postcss": "^0.9.0",
 		"load-grunt-tasks": "~5.1.0"
