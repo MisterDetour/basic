@@ -17,10 +17,6 @@ get_header(); ?>
 					<div class="entry">
 						<?php the_content() ?>
 					</div><!-- .entry -->
-			
-					<footer>
-						<?php edit_post_link( 'Edit this entry.', '<div>', '</div>' ); ?>
-					</footer>
 				</article>
 				
 			<?php endwhile; ?>

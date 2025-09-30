@@ -40,6 +40,8 @@ body {
 	.container {
 		display: flex;
 		justify-content: space-between;
+		padding-top: 20px;
+		padding-bottom: 20px;
 	}
 
 	&-toggle {
@@ -48,11 +50,32 @@ body {
 		}
 	}
 
+	&-collapse {
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 30px;
+		width: 100%;
+
+		@media (min-width: vars.$md) {
+			display: block;
+			position: static;
+			width: auto;
+		}
+
+		&.open {
+			display: block;
+		}
+	}
+
 	&-nav {
-		ul {
-			display: flex;
-			list-style-type: none;
-			column-gap: 10px;
+		display: flex;
+		list-style-type: none;
+		column-gap: 10px;
+		flex-direction: column;
+
+		@media (min-width: vars.$md) {
+			flex-direction: row;
 		}
 
 		a {

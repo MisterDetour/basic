@@ -55,7 +55,7 @@ add_action( 'widgets_init', 'register_basic_sidebars' );
 function basic_load_scripts() {
 	wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/css/style.css' );
 	
-	wp_enqueue_script( 'custom', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'custom', get_stylesheet_directory_uri() . '/js/custom.js', array(), false, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
