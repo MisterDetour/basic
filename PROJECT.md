@@ -2,7 +2,7 @@
 
 -   [ ] Make everything editable
 -   [ ] Set up responsiveness
--   [ ] Add custom sizes attr to responsive image html (see notes below)
+-   [ ] Modify image sizes in basic_custom_responsive_image_sizes
 -   [ ] Review all editor styles
 
 ## Project Testing
