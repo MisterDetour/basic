@@ -125,7 +125,7 @@ function basic_custom_responsive_image_sizes( $sizes, $size, $image_src ) {
 	}
 
 	// default
-	return '(max-width: 781px) 100vw, ' . $half . 'px';
+	return '(max-width: ' . $width . 'px) 100vw, ' . $half . 'px';
 }
 
 add_filter( 'wp_calculate_image_sizes', 'basic_custom_responsive_image_sizes', 10 , 3 );
